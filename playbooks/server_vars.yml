@@ -1,26 +1,26 @@
 ---
 
 #Please change ip address of the servers 
-lms_hosts: ${groups.lms[0]}
+lms_hosts: '192.168.33.31'
 lms_nginx_port: '80'
-cms_hosts: ${groups.cms[0]}
+cms_hosts: '192.168.33.33'
 cms_nginx_port: '80'
-worker_host: ${groups.workers[0]}
-mysql_host: ${groups.mysql[0]}
-mongo_hosts: ${groups.mongo[0]}
+worker_host: '127.0.0.1'
+mysql_host: '192.168.33.34'
+mongo_hosts: '192.168.33.35'
 #mongo_hosts: ${groups.mongo}
-forum_host: ${groups.forum[0]}
-ora_host: ${groups.ora[0]}
-certs_host: ${groups.certs[0]}
-rabbit_master: ${groups.rabbit_master[0]}
+forum_host: '127.0.0.1'
+ora_host: '127.0.0.1'
+certs_host: '127.0.0.1'
+rabbit_master: '127.0.0.1'
 #rabbit_master_hostname: 'Rabbit1'
 #rabbit_slave1: ${groups.rabbit_slave1[0]}
 #rabbit_slave1_hostname: 'Rabbit2'
 #rabbit_slave2: ${groups.rabbit_slave2[0]}
 #rabbit_slave2_hostname: 'Rabbit3'
-xqueue_host: ${groups.xqueue[0]}
-elasticsearch_host: ${groups.elasticsearch[0]}
-memcached_host: ${groups.memcached[0]}
+xqueue_host: '127.0.0.1'
+elasticsearch_host: '127.0.0.1'
+memcached_host: '127.0.0.1'
 
 #common variables
 migrate_db: "yes"
@@ -135,7 +135,7 @@ EDXAPP_MONGO_DB_NAME: 'edxapp'
 EDXAPP_MONGO_USER: 'edxapp'
 EDXAPP_MONGO_PASS: 'password'
 openid_workaround: True
-edx_platform_version: 'release'
+edx_platform_version: 'master'
 EDXAPP_PYTHON_SANDBOX: False
 EDXAPP_SESSION_COOKIE_DOMAIN: ""
 EDXAPP_SITE_NAME: $lms_hosts
@@ -146,7 +146,7 @@ EDXAPP_CMS_NGINX_PORT: $cms_nginx_port
 EDXAPP_LMS_BASE: $lms_hosts
 EDXAPP_LMS_NGINX_PORT: $lms_nginx_port
 EDXAPP_PREVIEW_LMS_BASE: $lms_hosts
-EDXAPP_TIME_ZONE: 'Asia/Kolkata'
+EDXAPP_TIME_ZONE: 'Asia/Ho_Chi_Minh'
 EDXAPP_COMMENTS_SERVICE_URL:  "http://{{forum_host}}:18080"
 EDXAPP_PLATFORM_NAME: 'BharatMOOC'
 EDXAPP_RABBIT_HOSTNAME: $rabbit_master
